@@ -33,7 +33,7 @@ function GetThat($arr,$key){
             else{
                 if($key_gen === $key){ // değer array değilse ve key doğru ise değeri echo ile yazdır
                     $kont = false;
-                    echo $value;
+                    echo 'burayı sildim'
                 }
             }
         }
@@ -41,7 +41,7 @@ function GetThat($arr,$key){
 }
 
 if($kont){
-    echo 'yazdığınız değer bulunamadı';
+    echo 'yazdığınız değer bulunamadı. merhaba';
 }
 
 GetThat($arr,'ahmet');
