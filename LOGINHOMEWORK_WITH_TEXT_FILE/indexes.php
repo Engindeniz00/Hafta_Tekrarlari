@@ -15,9 +15,9 @@ include("db.php");
 <body>
 <?php
 if(isset($_SESSION['username'])){
-    include ('admin.php');
+    include('adminn.php');
 }else{
-    include ('login.php');
+    include('login_screen.php');
 }
 
 ?>

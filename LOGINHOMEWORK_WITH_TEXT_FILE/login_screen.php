@@ -1,5 +1,5 @@
 <?php
-include("databaseFunctions.php");
+include("dbFunctions.php");
 $errors = '';
 function filter($post){
     if(is_array($post)){
@@ -45,10 +45,10 @@ if(isset($_POST['submit'])){
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         // burada index'in bulunduğu konuma yönlendiriyoruz
-        header('Location:index.php');
+        header('Location:indexes.php');
         echo 'Lütfen bekleyin yönlendiriliyorsunuz';
         // burada ise yönlendirdiğimiz sayfayı yeniliyoruz
-        header("Refresh:4;url=index.php");   }
+        header("Refresh:4;url=indexes.php");   }
 
 }elseif (isset($_POST['register_submit'])){
     $nameSurname = $_POST['register_namesurname'];

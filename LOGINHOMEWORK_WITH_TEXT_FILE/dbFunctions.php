@@ -9,7 +9,7 @@ function filterDatas($data){
 
 function WriteToTextFile($register_namesurname,$register_username,$register_mail,$register_password){
     $user_data = $register_namesurname.','.$register_username.','.$register_mail.','.$register_password;
-    $file = fopen("database.txt","a");
+    $file = fopen("db.txt","a");
     fwrite($file,$user_data."\n");
 
     fclose($file);
@@ -17,7 +17,7 @@ function WriteToTextFile($register_namesurname,$register_username,$register_mail
 
 function CheckMatchingData($wanted_username,$wanted_password){
     $row = 1;
-    if(($handle = fopen("database.txt","r"))!== FALSE){
+    if(($handle = fopen("db.txt","r"))!== FALSE){
         while(!feof($handle)){
             $key_array = array('r_namesurname','r_username','r_email','r_password'); // keyler için array
             $line = fgets($handle); // valuelar için array
@@ -56,7 +56,7 @@ function executesOnArray($arr,$wanted_username,$wanted_password )
 function userNameExistence($username){
     $control = false;
     // dosya okuma
-    if(($handle = fopen("database.txt","r"))!== FALSE){
+    if(($handle = fopen("db.txt","r"))!== FALSE){
         while(!feof($handle)){
             $key_array = array('r_namesurname','r_username','r_email','r_password'); // keyler için array
             $line = fgets($handle); // valuelar için array
